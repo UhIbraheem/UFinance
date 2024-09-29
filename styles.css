@@ -1,17 +1,22 @@
+/* Full-screen landing page */
 .financial-section {
     background-color: #e7e7e7;
     display: flex;
-    max-width: 818px;
-    padding: 54px 0;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;  /* Ensures it takes up the entire viewport height */
+    padding: 54px 0;
     font-weight: 300;
   }
   
+  /* Centering header and content */
   .header {
     display: flex;
     flex-direction: column;
+    align-items: center; /* Center text horizontally */
     position: relative;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: none; /* Removed shadow */
     min-height: 174px;
     width: 100%;
     color: #1a202c;
@@ -31,45 +36,33 @@
   
   .content-wrapper {
     display: flex;
-    width: 100%;
-    max-width: 651px;
     flex-direction: column;
-    margin: 25px 0 0 28px;
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    width: 100%;
+    max-width: 800px; /* Optional: Set a max width for readability */
+    margin-top: 20px;
   }
   
   .tagline {
     color: #1a202c;
-    align-self: start;
-    font: 20px 'Roboto Mono', sans-serif;
+    font-size: 20px;
   }
   
   .button-group {
-    align-self: end;
     display: flex;
-    margin-top: 130px;
-    width: 528px;
-    max-width: 100%;
-    gap: 40px 71px;
-    color: #2d6daf;
-    text-align: center;
+    justify-content: center; /* Align buttons horizontally */
+    gap: 20px;
     flex-wrap: wrap;
-    font: 13px Roboto, sans-serif;
-  }
-  
-  .button {
-    border-radius: 16px;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    display: flex;
-    flex-direction: column;
-    white-space: nowrap;
-    flex: 1;
-    margin-bottom: 14px;
+    margin-top: 40px;
   }
   
   .button-inner {
     border-radius: 16px;
     background-color: #6ac9c7;
     padding: 17px 47px;
+    text-align: center;
+    font-size: 16px;
   }
   
   @media (max-width: 991px) {
