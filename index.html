@@ -1,101 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UFinance</title>
-    <style>
-        /* Inline CSS */
-        body {
-            background-color: #f8f9fa;
-            font-family: Arial, sans-serif;
-        }
-        header {
-            background-color: #343a40;
-            color: white;
-            padding: 15px 0;
-            text-align: center;
-        }
-        .navbar {
-            margin: 0;
-            padding: 0;
-            list-style-type: none;
-            background-color: #343a40;
-            display: flex;
-            justify-content: center;
-        }
-        .navbar li {
-            display: inline;
-            margin-right: 20px;
-        }
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            padding: 10px;
-        }
-        .navbar a:hover {
-            text-decoration: underline;
-        }
-        .content-section {
-            padding: 20px;
-            margin: 15px 0;
-            background-color: white;
-            border-radius: 5px;
-        }
-        footer {
-            background-color: #343a40;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UFinance</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
 </head>
 <body>
-<header>
-    <h1>UFinance</h1>
-</header>
-
-<ul class="navbar">
-    <li><a href="#finances">Finances</a></li>
-    <li><a href="#roth-ira">Roth IRAs</a></li>
-    <li><a href="#investments">Investments</a></li>
-    <li><a href="#quizzes">Quizzes</a></li>
-    <li><a href="#vanguard">Learn about Vanguard</a></li>
-</ul>
-
-<main class="container">
-    <section id="finances" class="content-section">
-        <h2>Finances</h2>
-        <p>Explore the basics of personal finance, budgeting, and financial planning.</p>
-    </section>
-
-    <section id="roth-ira" class="content-section">
-        <h2>Roth IRAs</h2>
-        <p>Learn about Roth IRAs, their benefits, and how to open one.</p>
-    </section>
-
-    <section id="investments" class="content-section">
-        <h2>Investments</h2>
-        <p>Understand different types of investments and how to build a diversified portfolio.</p>
-    </section>
-
-    <section id="quizzes" class="content-section">
-        <h2>Quizzes</h2>
-        <p>Test your financial knowledge with our interactive quizzes.</p>
-    </section>
-
-    <section id="vanguard" class="content-section">
-        <h2>Learn about Vanguard</h2>
-        <p>Discover what Vanguard has to offer and how it can help you achieve your financial goals.</p>
-    </section>
-</main>
-
-<footer>
-    <p>&copy; 2024 UFinance. All rights reserved.</p>
-</footer>
-
+  <section class="financial-section">
+    <header class="header">
+      <img loading="lazy" src="your-image-url-here.jpg" class="header-image" alt="UFinance Header Image" />
+      <h1>UFinance</h1>
+    </header>
+    <div class="content-wrapper">
+      <p class="tagline">Building financial confidence, one step at a time, with resources tailored for you.</p>
+      <nav class="button-group">
+        <div class="button">
+          <a href="home.html" class="button-inner">Home</a>
+        </div>
+        <div class="button">
+          <a href="quiz.html" class="button-inner">Quiz</a>
+        </div>
+        <div class="button">
+          <a href="learn-more.html" class="button-inner">Learn More</a>
+        </div>
+      </nav>
+    </div>
+  </section>
 </body>
 </html>

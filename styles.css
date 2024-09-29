@@ -1,0 +1,104 @@
+.financial-section {
+    background-color: #e7e7e7;
+    display: flex;
+    max-width: 818px;
+    padding: 54px 0;
+    flex-direction: column;
+    font-weight: 300;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    min-height: 174px;
+    width: 100%;
+    color: #1a202c;
+    white-space: nowrap;
+    padding: 35px 70px 84px;
+    font: 76px/1 'Roboto Mono', sans-serif;
+  }
+  
+  .header-image {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 651px;
+    flex-direction: column;
+    margin: 25px 0 0 28px;
+  }
+  
+  .tagline {
+    color: #1a202c;
+    align-self: start;
+    font: 20px 'Roboto Mono', sans-serif;
+  }
+  
+  .button-group {
+    align-self: end;
+    display: flex;
+    margin-top: 130px;
+    width: 528px;
+    max-width: 100%;
+    gap: 40px 71px;
+    color: #2d6daf;
+    text-align: center;
+    flex-wrap: wrap;
+    font: 13px Roboto, sans-serif;
+  }
+  
+  .button {
+    border-radius: 16px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    flex: 1;
+    margin-bottom: 14px;
+  }
+  
+  .button-inner {
+    border-radius: 16px;
+    background-color: #6ac9c7;
+    padding: 17px 47px;
+  }
+  
+  @media (max-width: 991px) {
+    .header {
+      font-size: 40px;
+      max-width: 100%;
+      white-space: initial;
+      padding: 0 20px;
+    }
+  
+    .content-wrapper {
+      max-width: 100%;
+    }
+  
+    .tagline {
+      max-width: 100%;
+    }
+  
+    .button-group {
+      margin-top: 40px;
+    }
+  
+    .button {
+      white-space: initial;
+    }
+  
+    .button-inner {
+      white-space: initial;
+      padding: 0 20px;
+    }
+  }
+  
