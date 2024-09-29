@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UFinance</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="styles.css">
 
   <!-- Link to Google Fonts for Roboto Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,13 +12,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Header section with a thinner image -->
   <section class="financial-section">
     <header class="header">
-      <img loading="lazy" src="images/piggy_bank.jpg" class="header-image" alt="UFinance Header Image" />
-      <h1>UFinance</h1>
+      <img loading="lazy" src="images/numbers.jpg" class="header-image" alt="UFinance Header Image" />
     </header>
+
+    <!-- UFinance logo positioned below the header -->
+    <div class="logo-container">
+      <h1>UFinance</h1>
+    </div>
+
     <div class="content-wrapper">
       <p class="tagline">Building financial confidence, one step at a time, with resources tailored for you.</p>
+
       <nav class="button-group">
         <div class="button">
           <a href="home.html" class="button-inner">Home</a>
@@ -29,8 +36,30 @@
         <div class="button">
           <a href="learn-more.html" class="button-inner">Learn More</a>
         </div>
+        <div class="button">
+          <a href="about-us.html" class="button-inner">About Us</a>
+        </div>
       </nav>
     </div>
   </section>
+
+  <button class="night-mode-toggle" id="toggleNightMode">Enable Night Mode</button>
+
+  <!-- JavaScript for toggling night mode -->
+  <script>
+    const toggleNightMode = document.getElementById('toggleNightMode');
+    const body = document.body;
+
+    toggleNightMode.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+
+      // Change button text based on the mode
+      if (body.classList.contains('dark-mode')) {
+        toggleNightMode.textContent = 'Enable Light Mode';
+      } else {
+        toggleNightMode.textContent = 'Enable Night Mode';
+      }
+    });
+  </script>
 </body>
 </html>

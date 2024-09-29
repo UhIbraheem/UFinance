@@ -4,15 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UFinance - Home</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Link to Google Fonts for Roboto Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Welcome to UFinance</h1>
-    <p>This is the Home Page where we introduce financial concepts and tools for your journey.</p>
-  </header>
-  <nav>
-    <a href="index.html">Back to Landing Page</a>
-  </nav>
+  <!-- Header section -->
+  <section class="financial-section">
+    <header class="header">
+      <img loading="lazy" src="images/piggy_bank.jpg" class="header-image" alt="Home Page Image" />
+    </header>
+
+    <!-- UFinance Home Page content -->
+    <div class="logo-container">
+      <h1>Welcome to UFinance</h1>
+    </div>
+
+    <div class="content-wrapper">
+      <p class="tagline">Your financial journey starts here. Explore resources to build your confidence and knowledge.</p>
+      <p>At UFinance, we offer a wide range of tools and resources designed to empower your financial growth. Whether you're new to investing, or a seasoned financial planner, we have something for everyone.</p>
+
+      <nav class="button-group">
+        <div class="button">
+          <a href="index.html" class="button-inner">Back to Landing Page</a>
+        </div>
+        <div class="button">
+          <a href="learn-more.html" class="button-inner">Learn More</a>
+        </div>
+        <div class="button">
+          <a href="quiz.html" class="button-inner">Take the Quiz</a>
+        </div>
+        <div class="button">
+          <a href="about-us.html" class="button-inner">About Us</a>
+        </div>
+      </nav>
+    </div>
+  </section>
 </body>
 </html>

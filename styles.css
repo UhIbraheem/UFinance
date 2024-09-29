@@ -1,38 +1,47 @@
-/* Light gray background for the entire website */
+/* Light mode styles (default) */
 body {
-    background-color: #f2f2f2; /* Light gray shade */
+    background-color: #f2f2f2;
     margin: 0;
     padding: 0;
     font-family: 'Roboto Mono', monospace; /* Apply Roboto Mono font */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
   }
-  /*   fee*/
+  
+  h1, h2, h3, h4, h5, h6, p, a {
+    font-family: 'Roboto Mono', monospace; /* Apply to all text */
+    transition: color 0.3s ease; /* Smooth transitions for text color */
+  }
+  
   /* Full-screen landing page */
   .financial-section {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    min-height: 100vh;  /* Ensures it takes up the entire viewport height */
-    padding: 0;  /* No padding at the top */
+    min-height: 100vh;
+    padding: 0;
     font-weight: 300;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards; /* Fade in normally for section */
   }
   
-  /* Header styling with image at the top */
+  /* Thinner header */
   .header {
     position: relative;
     width: 100%;
-    height: 50vh; /* Reduced height of the image to make it less thick */
-    color: #0B3D91; /* Dark blue color for UFinance text */
-    font-size: 76px;
+    height: 35vh;
     display: flex;
-    align-items: flex-end; /* Align text to the bottom of the image */
-    justify-content: flex-end; /* Align heading to the right */
-    padding-right: 10%; /* Padding to shift text away from the edge */
-    box-shadow: none; /* Removed shadow */
-    margin: 0; /* Removed margin to ensure the image is at the top */
+    align-items: flex-end;
+    justify-content: center;
+    margin: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    z-index: 1;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-out forwards; /* Header fades in with no movement */
   }
   
-  /* Make sure image fills the header space */
+  /* Header image */
   .header-image {
     position: absolute;
     top: 0;
@@ -41,51 +50,137 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    z-index: -1; /* Make sure the image is behind the text */
+    z-index: -1; /* Behind content */
+    animation: fadeIn 1.2s ease-out forwards; /* Image fades in with no movement */
   }
   
-  /* Center content below the header */
-  .content-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    text-align: center;
-    width: 100%;
-    max-width: 800px; /* Optional: Set a max width for readability */
-    margin-top: 50px; /* Increased margin to push buttons lower */
+  /* UFinance logo with Roboto font */
+  .logo-container h1 {
+    color: #d80027; /* Vanguard red */
+    font-size: 70px;
+    margin-left: 20px;
+    margin-bottom: 0;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards; /* Fade in from bottom */
+    animation-delay: 0.5s; /* Slight delay for smooth transition */
+    transition: color 0.3s ease;
+  }
+  
+  /* Night mode button */
+  .night-mode-toggle {
+    position: absolute;
+    top: 40vh; /* Positioned right under the picture */
+    right: 20px;
+    background-color: #d80027;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    z-index: 2; /* Ensure it's on top of the image */
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+    animation-delay: 0.7s;
   }
   
   /* Tagline styling */
   .tagline {
-    color: #1a202c;
-    font-size: 20px;
+    color: #333; /* Default dark gray color */
+    font-size: 22px;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+    animation-delay: 0.9s; /* Tagline appears after night mode button */
+    transition: color 0.3s ease; /* Transition the color smoothly */
   }
   
   /* Button group for navigation */
   .button-group {
     display: flex;
-    justify-content: center; /* Align buttons horizontally */
+    justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    margin-top: 80px; /* Added more space above buttons */
+    margin-top: 50px;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards; /* Buttons fade in and slide up */
+    animation-delay: 1.1s; /* Buttons appear last */
   }
   
-  /* Button inner style */
   .button-inner {
     border-radius: 16px;
-    background-color: #6ac9c7;
+    background-color: #d80027; /* Vanguard red */
+    color: white;
     padding: 17px 47px;
     text-align: center;
     font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* On hover, increase shadow and slightly lift the button */
+  .button-inner:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-5px);
+    background-color: #b3001b; /* Darker red on hover */
+  }
+  
+  /* Dark mode styles */
+  body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+  }
+  
+  body.dark-mode .logo-container h1 {
+    color: #e0e0e0;
+  }
+  
+  body.dark-mode .night-mode-toggle {
+    background-color: #e0e0e0;
+    color: #1a1a1a;
+  }
+  
+  body.dark-mode .button-inner {
+    background-color: #333;
+    color: #e0e0e0;
+  }
+  
+  body.dark-mode .tagline {
+    color: #e0e0e0; /* Update slogan text to light color in dark mode */
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Fade-in and slide-up animation */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px); /* Start from 20px below */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* End at normal position */
+    }
   }
   
   /* Responsive design for mobile devices */
   @media (max-width: 991px) {
     .header {
       font-size: 40px;
-      max-width: 100%;
-      white-space: initial;
-      padding: 0 20px;
+    }
+  
+    .logo-container h1 {
+      font-size: 50px;
+      margin-left: 15px;
     }
   
     .content-wrapper {
@@ -100,13 +195,14 @@ body {
       margin-top: 40px;
     }
   
-    .button {
-      white-space: initial;
+    .button-inner {
+      padding: 10px 20px;
     }
   
-    .button-inner {
-      white-space: initial;
-      padding: 0 20px;
+    .night-mode-toggle {
+      top: auto;
+      bottom: 10px; /* Move the button to the bottom on small screens */
+      right: 10px;
     }
   }
   
